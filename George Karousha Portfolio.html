@@ -1,0 +1,294 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>George Karousha Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: a drawing sheet. Blueprint grid ground, a title block beside the name, ruled rows for skills. */
+:root {
+  --paper: #EEF1F5;
+  --surface: #F8FAFC;
+  --ink: #13202E;
+  --muted: #4B5B74;
+  --line: #B7C2D4;
+  --grid: #DCE3EC;
+  --accent: #1B4FD6;
+  --accent-ink: #FFFFFF;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0C1828;
+    --surface: #102038;
+    --ink: #E7EEF8;
+    --muted: #9DB0CB;
+    --line: #2C4262;
+    --grid: #122640;
+    --accent: #8CB6FF;
+    --accent-ink: #0C1828;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0C1828;
+  --surface: #102038;
+  --ink: #E7EEF8;
+  --muted: #9DB0CB;
+  --line: #2C4262;
+  --grid: #122640;
+  --accent: #8CB6FF;
+  --accent-ink: #0C1828;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-block: 20px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.mono { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Header */
+header.top {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--line);
+}
+.brand { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 1.1rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+nav a { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 6px 0; }
+nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; align-items: end; padding-block: 56px 48px; }
+.hero .eyebrow { color: var(--accent); margin: 0 0 16px; }
+h1 {
+  font-family: var(--font-display); font-weight: 800; font-stretch: 125%;
+  font-size: clamp(2.7rem, 9.5vw, 5.6rem); line-height: 0.98; letter-spacing: -0.02em;
+  margin: 0 0 24px; text-wrap: balance; overflow-wrap: anywhere;
+}
+.lede { font-size: 1.15rem; max-width: 34em; margin: 0; color: var(--ink); }
+
+.titleblock { background: var(--surface); border: 1.5px solid var(--ink); }
+.titleblock dl { margin: 0; }
+.titleblock .row { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); border-bottom: 1px solid var(--line); }
+.titleblock .row:last-child { border-bottom: 0; }
+.titleblock dt { margin: 0; padding: 10px 12px; border-right: 1px solid var(--line); color: var(--muted); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; }
+.titleblock dd { margin: 0; padding: 10px 12px; font-weight: 500; overflow-wrap: anywhere; }
+
+/* Sections */
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+.sec-head { display: flex; align-items: baseline; gap: 16px; margin: 0 0 28px; flex-wrap: wrap; }
+h2 { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: clamp(1.6rem, 4.5vw, 2.2rem); line-height: 1.1; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.sec-head .mono { color: var(--muted); }
+
+.about { max-width: 42em; font-size: 1.08rem; margin: 0; }
+.about + .about { margin-top: 14px; }
+
+/* Skills rows */
+.rows { margin: 0; padding: 0; list-style: none; border-top: 1.5px solid var(--ink); }
+.rows li { display: grid; grid-template-columns: minmax(0, 12rem) minmax(0, 1fr); gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.rows .name { font-family: var(--font-display); font-weight: 700; font-stretch: 110%; font-size: 1.2rem; }
+.rows .desc { color: var(--muted); }
+
+/* Certificates */
+.certs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cert { background: var(--surface); border: 1.5px solid var(--ink); padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.cert .mono { color: var(--accent); }
+.cert h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-stretch: 110%; font-size: 1.3rem; line-height: 1.2; }
+.cert p { margin: 0; color: var(--muted); }
+
+/* Projects */
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.project { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.project h3 { margin: 0; font-family: var(--font-display); font-weight: 700; font-stretch: 110%; font-size: 1.25rem; line-height: 1.2; }
+.project p { margin: 0; color: var(--muted); }
+.pill { align-self: flex-start; border: 1px solid var(--accent); color: var(--accent); padding: 2px 10px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+.tags span { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink); background: var(--paper); border: 1px solid var(--line); padding: 2px 8px; }
+.note { margin: 16px 0 0; color: var(--muted); font-size: 0.92rem; }
+
+/* Contact */
+.contact { display: grid; gap: 0; border-top: 1.5px solid var(--ink); max-width: 44rem; }
+.contact .item { display: grid; grid-template-columns: 6rem minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.contact .label { color: var(--muted); font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.contact .value { font-family: var(--font-mono); font-size: 1.05rem; overflow-wrap: anywhere; }
+.copy {
+  font: inherit; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--accent); color: var(--accent-ink); border: 0; padding: 8px 14px; cursor: pointer; min-width: 5.5rem;
+}
+.copy:hover { filter: brightness(1.08); }
+
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); }
+
+@media (max-width: 900px) {
+  .projects { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 36px 32px; gap: 32px; }
+  .certs { grid-template-columns: minmax(0, 1fr); }
+  .rows li { grid-template-columns: minmax(0, 1fr); }
+  .contact .item { grid-template-columns: minmax(0, 1fr) auto; }
+  .contact .label { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">George Karousha</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="eyebrow mono">Web developer</p>
+        <h1>George<br>Karousha</h1>
+        <p class="lede">I build responsive websites with HTML, CSS, JavaScript and React, and I design pages that are clear to read and easy to use.</p>
+      </div>
+      <div class="titleblock" aria-label="Summary">
+        <dl>
+          <div class="row"><dt>Sheet</dt><dd>Portfolio</dd></div>
+          <div class="row"><dt>Drawn by</dt><dd>George Karousha</dd></div>
+          <div class="row"><dt>Role</dt><dd>Web developer</dd></div>
+          <div class="row"><dt>Stack</dt><dd>HTML, CSS, JavaScript, React</dd></div>
+          <div class="row"><dt>Open to</dt><dd>Front-end developer and web design roles</dd></div>
+          <div class="row"><dt>Issued</dt><dd>04 Nov 2026</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="sec-head"><h2>About</h2></div>
+      <p class="about">I am a web developer. I turn designs into fast, responsive pages using HTML, CSS and JavaScript, and I build interactive interfaces with React.</p>
+      <p class="about">I hold a web design certificate and an English certificate. I am building a set of portfolio projects to show how I work, starting with a property listing site.</p>
+    </section>
+
+    <section id="skills">
+      <div class="sec-head"><h2>Skills</h2></div>
+      <ul class="rows">
+        <li><span class="name">HTML</span><span class="desc">Semantic page structure that works for readers and search engines.</span></li>
+        <li><span class="name">CSS</span><span class="desc">Responsive layouts with Flexbox and Grid that fit phones, tablets and desktops.</span></li>
+        <li><span class="name">JavaScript</span><span class="desc">Page behavior, forms, filtering and data fetched from APIs.</span></li>
+        <li><span class="name">React</span><span class="desc">Reusable components, props and state for interactive interfaces.</span></li>
+        <li><span class="name">Web design</span><span class="desc">Layout, typography and color choices that keep a page clear.</span></li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <div class="sec-head"><h2>Certificates</h2></div>
+      <div class="certs">
+        <div class="cert">
+          <span class="mono">Certificate</span>
+          <h3>Web design</h3>
+          <p>Training in designing and building websites.</p>
+        </div>
+        <div class="cert">
+          <span class="mono">Certificate</span>
+          <h3>English</h3>
+          <p>Working proficiency for documentation, teamwork and clients.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="sec-head"><h2>Projects</h2><span class="mono">In progress</span></div>
+      <div class="projects">
+        <article class="project">
+          <span class="pill">Planned</span>
+          <h3>Property listing site</h3>
+          <p>A listings page where visitors search and filter homes by price and area.</p>
+          <div class="tags"><span>React</span><span>JavaScript</span><span>CSS</span></div>
+        </article>
+        <article class="project">
+          <span class="pill">Planned</span>
+          <h3>Weather app</h3>
+          <p>Shows the forecast for a city using data from a public API.</p>
+          <div class="tags"><span>React</span><span>API</span></div>
+        </article>
+        <article class="project">
+          <span class="pill">Planned</span>
+          <h3>To-do list</h3>
+          <p>Add, finish and remove tasks, with the list kept between visits.</p>
+          <div class="tags"><span>React</span><span>State</span></div>
+        </article>
+      </div>
+      <p class="note">These are the next projects on the list. Each will link to its live site and source code when it is published.</p>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head"><h2>Contact</h2></div>
+      <div class="contact">
+        <div class="item">
+          <span class="label">Email</span>
+          <span class="value" id="email-value">gerogegandym13@gmail.com</span>
+          <button class="copy" type="button" data-target="email-value">Copy</button>
+        </div>
+        <div class="item">
+          <span class="label">Phone</span>
+          <span class="value" id="phone-value">050737070759</span>
+          <button class="copy" type="button" data-target="phone-value">Copy</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="mono">George Karousha</span>
+    <span class="mono">Web developer · 2026</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-target'));
+    var text = el.textContent.trim();
+    function done(ok) {
+      btn.textContent = ok ? 'Copied' : 'Press Ctrl+C';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+    }
+    function fallback() {
+      try {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      } catch (e) {}
+      done(false);
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body></html>
